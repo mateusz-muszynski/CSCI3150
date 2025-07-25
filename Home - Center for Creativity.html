@@ -10,25 +10,35 @@
   <a href="#main-content" class="skip-link">Skip to main content</a>
   <div id="page" class="site">
     <header class="site-header">
-      <nav class="primary-nav" aria-label="Main navigation">
+      <nav class="primary-nav" aria-label="Main navigation" role="navigation">
         <div class="site-logo">
-          <a href="https://mateusz-muszynski.github.io/CSCI3150/Home%20-%20Center%20for%20Creativity.html" title="Center for Creativity">
-            <img src="./Center for Creativity Styling/cfclogo.png" alt="Center for Creativity">
+          <a href="/" title="Center for Creativity - Home">
+            <img src="./Center for Creativity Styling/cfclogo.png" alt="Center for Creativity logo featuring artistic brushstrokes in vibrant colors">
           </a>
         </div>
-        <ul class="menu">
-          <li class="menu-item current-menu-item"><a href="/">Home</a></li>
-          <li class="menu-item menu-item-has-children">
-            <a href="#">About</a>
-            <ul class="sub-menu">
-              <li><a href="/about-us/">About Us</a></li>
-              <li><a href="/resources/">Resources</a></li>
-              <li><a href="/how-to-help/">Donate</a></li>
+        <ul class="menu" role="menubar">
+          <li class="menu-item current-menu-item" role="none">
+            <a href="/" role="menuitem" aria-current="page">Home</a>
+          </li>
+          <li class="menu-item menu-item-has-children" role="none">
+            <a href="#" role="menuitem" aria-expanded="false" aria-haspopup="true">About & Support</a>
+            <ul class="sub-menu" role="menu" aria-label="About and Support submenu">
+              <li role="none"><a href="/about-us/" role="menuitem">About Us</a></li>
+              <li role="none"><a href="/our-story/" role="menuitem">Our Story</a></li>
+              <li role="none"><a href="/resources/" role="menuitem">Resources</a></li>
+              <li role="none"><a href="/how-to-help/" role="menuitem">Donate</a></li>
+              <li role="none"><a href="/contact-us/" role="menuitem">Contact Us</a></li>
             </ul>
           </li>
-          <li class="menu-item"><a href="/exhibitions/">Exhibitions</a></li>
-          <li class="menu-item"><a href="/events/">Events</a></li>
-          <li class="menu-item"><a href="/book-an-event/">Book an Event</a></li>
+          <li class="menu-item menu-item-has-children" role="none">
+            <a href="#" role="menuitem" aria-expanded="false" aria-haspopup="true">Programs & Events</a>
+            <ul class="sub-menu" role="menu" aria-label="Programs and Events submenu">
+              <li role="none"><a href="/exhibitions/" role="menuitem">Exhibitions</a></li>
+              <li role="none"><a href="/events/" role="menuitem">Events</a></li>
+              <li role="none"><a href="/classes/" role="menuitem">Classes</a></li>
+              <li role="none"><a href="/book-an-event/" role="menuitem">Book an Event</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </header>
@@ -37,21 +47,37 @@
       <main id="main-content" tabindex="-1" role="main">
 
         <!-- Call for Participation -->
-        <section class="call-section section-full call-header" tabindex="0">
-          <h2 class="section-title">CALL FOR PARTICIPATION</h2>
-          <h1>Now accepting proposals for curatorial projects and visual art exhibitions...</h1>
-          <a href="/exhibitions/exhibition-proposals/" class="apply-button">APPLY HERE</a>
+        <section class="call-section section-full" aria-labelledby="call-heading">
+          <h1 id="call-heading" class="section-title">CALL FOR PARTICIPATION</h1>
+          <p class="call-subtitle">Now accepting proposals for curatorial projects and visual art exhibitions</p>
+          <a href="/exhibitions/exhibition-proposals/" class="apply-button" aria-describedby="call-heading">Apply Here</a>
+        </section>
+
+        <!-- Our Mission -->
+        <section class="mission-section section-boxed" aria-labelledby="our-mission">
+          <div class="section-content">
+            <h2 id="our-mission" class="section-title">Our Mission</h2>
+            <p>To establish an inclusive, accessible, and innovative arts center that nurtures creativity, strengthens community bonds, and empowers individuals to experience, create, and connect.</p>
+          </div>
+        </section>
+
+        <!-- Our Vision -->
+        <section class="vision-section section-boxed" aria-labelledby="our-vision">
+          <div class="section-content">
+            <h2 id="our-vision" class="section-title">Our Vision</h2>
+            <p>A strong, connected, and vibrant community driven by engagement with the arts—a home for artists and arts organizations to engage with community together. A safe space where everyone is welcome and creativity unites us.</p>
+          </div>
         </section>
 
         <!-- Experience/Create/Connect -->
-        <section class="experience-block section-full" aria-labelledby="experience-heading" tabindex="0">
+        <section class="experience-block section-full" aria-labelledby="experience-heading">
           <h2 id="experience-heading" class="section-title">Experience • Create • Connect</h2>
           <div class="wp-block-columns">
             <div class="wp-block-column">
-              <div class="spot-image" tabindex="0" aria-label="Image for Experience (dancing)">
-                <img src="Center for Creativity Styling/page1.dancers-300x300.jpg" alt="Dancing">
+              <div class="spot-image" role="img" aria-labelledby="experience-title">
+                <img src="Center for Creativity Styling/page1.dancers-300x300.jpg" alt="Two dancers in flowing white clothing performing an expressive contemporary dance routine in a bright studio space">
               </div>
-              <h3>EXPERIENCE</h3>
+              <h3 id="experience-title">EXPERIENCE</h3>
               <ul>
                 <li>Inspiring art exhibits by local and international artists</li>
                 <li>Diverse theater and music events</li>
@@ -60,10 +86,10 @@
               </ul>
             </div>
             <div class="wp-block-column">
-              <div class="spot-image" tabindex="0" aria-label="Image for Create (making art)">
-                <img src="Center for Creativity Styling/page1-susie.400-300x300.jpg" alt="Creating Art">
+              <div class="spot-image" role="img" aria-labelledby="create-title">
+                <img src="Center for Creativity Styling/page1-susie.400-300x300.jpg" alt="Artist working at a pottery wheel, hands shaping clay with focused concentration in a ceramics studio">
               </div>
-              <h3>CREATE</h3>
+              <h3 id="create-title">CREATE</h3>
               <ul>
                 <li>A wide array of arts classes and programming for all ages</li>
                 <li>Amenities for dedicated art practice: ceramics, printmaking, dance and performance</li>
@@ -71,10 +97,10 @@
               </ul>
             </div>
             <div class="wp-block-column">
-              <div class="spot-image" tabindex="0" aria-label="Image for Connect (Teaching Others)">
-                <img src="Center for Creativity Styling/page1.erinashford_AOTS.400-300x300.jpg" alt="Teaching other how to Create Art">
+              <div class="spot-image" role="img" aria-labelledby="connect-title">
+                <img src="Center for Creativity Styling/page1.erinashford_AOTS.400-300x300.jpg" alt="Instructor teaching a group of diverse students in an art class, sharing techniques and fostering creative community">
               </div>
-              <h3>CONNECT</h3>
+              <h3 id="connect-title">CONNECT</h3>
               <ul>
                 <li>A place to develop your creative talent with local mentors</li>
                 <li>A dedicated space for community events from across the county</li>
@@ -84,57 +110,68 @@
           </div>
         </section>
 
-        <!-- Quad-gallery under Experience/Create/Connect -->
-        <section class="quad-gallery" aria-label="Community Showcase" tabindex="0">
-          <img src="./Center for Creativity Styling/collages1-scaled.jpg" alt="Collage of Activities">
-          <img src="./Center for Creativity Styling/collage13.jpg" alt="Example of Art">
-          <img src="./Center for Creativity Styling/collage16.jpg" alt="Example of Creativity">
-          <img src="./Center for Creativity Styling/collage24.jpg" alt="Example of Community">
-        </section>
-
-       <!-- Our Mission -->
-        <section class="section-full centered" tabindex="0" aria-labelledby="our-mission">
-          <h2 id="our-mission" class="section-title">Our Mission</h2>
-          <p>OUR MISSION is to establish an inclusive, accessible, and innovative arts center that nurtures creativity, strengthens community bonds, and empowers individuals to experience, create, and connect.</p>
-        </section>
-
-        <!-- Our Vision -->
-        <section class="section-full centered" tabindex="0" aria-labelledby="our-vision">
-          <h2 id="our-vision" class="section-title">Our Vision</h2>
-          <p>OUR VISION is a strong, connected, and vibrant community driven by engagement with the arts—a home for artists and arts organizations to engage with community together. A safe space where everyone is welcome and creativity unites us.</p>
+        <!-- Community Showcase Gallery -->
+        <section class="quad-gallery-section" aria-labelledby="showcase-heading">
+          <h2 id="showcase-heading" class="section-title">Community Showcase</h2>
+          <div class="quad-gallery" role="img" aria-label="Gallery showcasing community art activities and creations">
+            <img src="./Center for Creativity Styling/collages1-scaled.jpg" alt="Collage showing various community art activities including painting workshops, sculpture classes, and creative collaboration sessions">
+            <img src="./Center for Creativity Styling/collage22.jpg" alt="Display of colorful abstract paintings and mixed media artworks created by community members">
+            <img src="./Center for Creativity Styling/collage23.jpg" alt="Students and artists working together on creative projects in bright, welcoming studio spaces">
+            <img src="./Center for Creativity Styling/collage24.jpg" alt="Community members of all ages participating in art events, exhibitions, and creative celebrations">
+          </div>
         </section>
 
         <!-- Our Story -->
-        <section class="section-full centered" tabindex="0" aria-labelledby="our-story">
-          <h2 id="our-story" class="section-title">Our Story</h2>
-          <p>Behind this effort is a passionate group of community leaders and artists working hard to make this dream a reality. Our journey began in 2010 with the formation of ARTS RWC, a collective of artists, art advocates, organizations, and civic leaders dedicated to advancing Redwood City as a dynamic and sustainable arts community. In 2022, we took a significant step...</p>
+        <section class="story-section section-boxed" aria-labelledby="our-story">
+          <div class="section-content">
+            <h2 id="our-story" class="section-title">Our Story</h2>
+            <p>Behind this effort is a passionate group of community leaders and artists working hard to make this dream a reality. Our journey began in 2010 with the formation of ARTS RWC, a collective of artists, art advocates, organizations, and civic leaders dedicated to advancing Redwood City as a dynamic and sustainable arts community.</p>
+            <a href="/our-story/" class="read-more-link" aria-label="Read the complete story of Center for Creativity">Read Our Complete Story</a>
+          </div>
         </section>
 
-        <!-- Keep in Touch -->
-        <section class="section-full centered" tabindex="0" aria-labelledby="keep-in-touch">
-          <h2 id="keep-in-touch" class="section-title">Keep in Touch</h2>
-          <h3>Sign up to receive updates!</h3>
-          <a class="apply-button" href="https://bit.ly/2YI6iME">Stay Informed</a>
-          <p>Visit us on <a href="https://www.instagram.com/centerforcreativitysmc/">Instagram</a></p>
-        </section>
-
-        <!-- Hours & Location -->
-        <section class="section-full centered" tabindex="0" aria-labelledby="hours-location-heading">
-          <h2 id="hours-location-heading" class="section-title">Hours & Location</h2>
-          <p>Mon–Fri: 9 am–6 pm<br>Sat: 10 am–4 pm<br>1400 Broadway, Redwood City, CA</p>
+        <!-- Contact & Hours Combined Section -->
+        <section class="contact-hours-section section-full" aria-labelledby="contact-hours-heading">
+          <h2 id="contact-hours-heading" class="section-title">Visit & Connect</h2>
+          <div class="contact-hours-grid">
+            <div class="contact-info">
+              <h3>Keep in Touch</h3>
+              <p>Sign up to receive updates about exhibitions, events, and classes!</p>
+              <a class="apply-button" href="https://bit.ly/2YI6iME" aria-label="Sign up for Center for Creativity newsletter updates">Stay Informed</a>
+              <p>Follow us on <a href="https://www.instagram.com/centerforcreativitysmc/" aria-label="Visit Center for Creativity Instagram page">Instagram</a></p>
+            </div>
+            <div class="hours-location">
+              <h3>Hours & Location</h3>
+              <div class="hours">
+                <p><strong>Hours:</strong></p>
+                <p>Monday–Friday: 9:00 AM–6:00 PM<br>
+                Saturday: 10:00 AM–4:00 PM<br>
+                Sunday: Closed</p>
+              </div>
+              <div class="location">
+                <p><strong>Address:</strong></p>
+                <address>
+                  1400 Broadway<br>
+                  Redwood City, CA 94063
+                </address>
+              </div>
+            </div>
+          </div>
         </section>
 
       </main>
     </div>
 
-    <footer class="site-footer">
+    <footer class="site-footer" role="contentinfo">
       <div class="footer-content">
         <p>&copy; 2025 Center for Creativity. All rights reserved.</p>
-        <ul class="footer-menu">
-          <li><a href="/privacy-policy/">Privacy Policy</a></li>
-          <li><a href="/terms-of-service/">Terms of Service</a></li>
-          <li><a href="/contact-us/">Contact Us</a></li>
-        </ul>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <ul class="footer-menu">
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms-of-service/">Terms of Service</a></li>
+            <li><a href="/accessibility/">Accessibility</a></li>
+          </ul>
+        </nav>
       </div>
     </footer>
   </div>
