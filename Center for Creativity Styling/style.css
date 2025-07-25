@@ -1,16 +1,20 @@
 /* Updated style.css for Accessibility & Layout */
 
-/* 1. Focus indicators */
+/* 1. Focus Indicators for all interactive elements */
 :focus {
   outline: 3px solid #005A9C;
   outline-offset: 2px;
 }
-a:focus, button:focus, input:focus, select:focus, textarea:focus {
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
   outline: 3px solid #005A9C;
   outline-offset: 2px;
 }
 
-/* 2. Skip-to-content link */
+/* 2. Skip-to-content link styling */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -25,19 +29,19 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
   top: 0;
 }
 
-/* 3. Navigation styling (full‑width) */
+/* 3. Navigation styling fixes (full-width) */
 .primary-nav {
-  width: 100%;
-  background: #FFF8DC;
-  padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
+  background: #FFF8DC;
+  padding: 0.5rem 1rem;
+  width: 100%;
   box-sizing: border-box;
 }
 .primary-nav .site-logo {
   margin-right: auto;
 }
-.site-logo img {
+.primary-nav .site-logo img {
   height: 40px;
   width: auto;
 }
@@ -75,8 +79,7 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
   border-radius: 4px;
   padding: 0.5rem 0;
   min-width: 200px;
-  z-index: 100;
-  list-style: none;
+  box-sizing: border-box;
 }
 .primary-nav li.menu-item:focus-within > .sub-menu,
 .primary-nav li.menu-item:hover > .sub-menu {
@@ -87,17 +90,28 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
   color: #333;
 }
 
-/* 4. Section titles (inline only) */
+/* 4. Section header styles */
 h2.section-title {
   font-size: 2rem;
   color: #2c62b9;
   border-bottom: 2px solid #FF9900;
   padding-bottom: 4px;
-  margin: 2rem auto 1rem;
+  margin: 2rem 0 1rem;
+  background: #FFF8DC;
   display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  width: auto;
 }
 
-/* 5. “Call for Participation” button */
+/* 5. Call-for-participation specific */
+.call-header {
+  padding: 2rem 1rem;
+  background: #FFEBB5;
+}
+.call-header h1 {
+  margin: 0.5rem 0 1rem;
+}
 .apply-button {
   background: #FF9900;
   color: #fff;
@@ -105,21 +119,15 @@ h2.section-title {
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
-  display: block;
-  margin: 1rem auto;
-  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
 }
 .apply-button:hover,
 .apply-button:focus {
   background: #FFB84D;
 }
 
-/* 6. Hide the old carousel */
-.flexslider {
-  display: none;
-}
-
-/* 7. Experience/Create/Connect block */
+/* 6. Experience/Create/Connect block */
 .experience-block {
   background: #FFF8DC;
   padding: 2rem 1rem;
@@ -127,43 +135,47 @@ h2.section-title {
 }
 .experience-block .wp-block-columns {
   display: flex;
-  justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .experience-block .wp-block-column {
   flex: 1;
   text-align: center;
 }
-.experience-block h3 {
-  margin-bottom: 0.5rem;
-}
-.experience-block ul {
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0 0;
-}
-.experience-block ul li {
-  margin: 0.5rem 0;
+.experience-block .spot-image {
+  width: 100%;
+  height: 150px;
+  background: #DDD;
+  margin-bottom: 1rem;
+  border-radius: 4px;
 }
 
-/* 8. Quad-gallery */
+/* 7. Quad image gallery */
 .quad-gallery {
   display: grid;
-  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
-  max-width: 400px;
+  max-width: 1146px;
   margin: 2rem auto;
-  border: 1px solid #ccc;
-  padding: 0.5rem;
-  border-radius: 4px;
 }
 .quad-gallery img {
   width: 100%;
   height: auto;
-  display: block;
-  border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+/* 8. Section-full common */
+.section-full {
+  width: 100%;
+  background: #FFF8DC;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+.section-full:focus {
+  outline: 3px solid #005A9C;
+  outline-offset: 2px;
 }
 
 /* 9. Community partners image */
@@ -174,13 +186,13 @@ h2.section-title {
   height: auto;
 }
 
-/* 10. Footer */
+/* 10. Hide decorative images from assistive tech */
+img[alt=""] {
+  visibility: hidden;
+}
+
+/* 11. Footer background */
 .site-footer {
   background: #F5F5DC;
   padding: 2rem 0;
-}
-
-/* 11. Hide decorative images from AT */
-img[alt=""] {
-  visibility: hidden;
 }
