@@ -40,12 +40,14 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus, [tabindex]:foc
   z-index: 2000;
   transition: top 0.3s ease;
   font-size: 16px;
+  opacity: 1;
 }
 
 .skip-link:focus {
   top: 0;
   outline: 3px solid #ffffff;
   outline-offset: 2px;
+  opacity: 1;
 }
 
 /* 3. Improved Navigation with Better Contrast */
@@ -92,9 +94,10 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus, [tabindex]:foc
 .primary-nav li.menu-item a:hover,
 .primary-nav li.menu-item a:focus,
 .primary-nav .current-menu-item > a {
-  background: #005A9C;
+  background: #4A90E2;
   color: #ffffff;
-  border-color: #003d6b;
+  font-weight: bold;
+  border-color: #357ABD;
 }
 
 /* Improved Submenu Styling - Removed Bullets */
