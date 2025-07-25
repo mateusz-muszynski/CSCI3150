@@ -3,61 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Home - Center for Creativity</title>
-  <link rel="stylesheet" id="custom-style-css" href="./Center for Creativity Styling/style.css" type="text/css" media="all">
-
-  <!-- Inline accessibility & visual enhancements -->
-  <style>
-    /* Skip to Content link */
-    .skip-link { position: absolute; top: -40px; left: 0; background: #FFD966; color: #333; padding: 8px 16px; z-index: 1000; transition: top 0.3s ease; }
-    .skip-link:focus { top: 0; }
-
-    /* Focus indicators */
-    a:focus, button:focus, input:focus { outline: 3px dashed #FF9900; outline-offset: 2px; }
-
-    /* Nav styling adjustments */
-    .primary-nav { display: flex; align-items: center; background: #FFF8DC; padding: 8px 1rem; width: 100%; box-sizing: border-box; }
-    .primary-nav .site-logo { margin-right: auto; }
-    .primary-nav .site-logo img { height: 40px; width: auto; }
-    .primary-nav ul.menu { display: flex; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; }
-    .primary-nav li.menu-item { margin: 0 0.5rem; position: relative; }
-    .primary-nav li.menu-item a { display: block; padding: 0.5rem 1rem; color: #333; text-decoration: none; border-radius: 4px; }
-    .primary-nav li.menu-item a:hover, .primary-nav li.menu-item a:focus, .primary-nav .current-menu-item > a { background: #FFDA75; color: #111; }
-    .primary-nav .sub-menu { display: none; position: absolute; top: 100%; left: 0; background: #FFF; border: 1px solid #FFDA75; border-radius: 4px; padding: 0.5rem 0; min-width: 200px; }
-    .primary-nav li.menu-item:focus-within > .sub-menu, .primary-nav li.menu-item:hover > .sub-menu { display: block; }
-    .primary-nav .sub-menu li a { padding: 0.5rem 1rem; color: #333; }
-
-    /* Section headings style */
-    h2.section-title { font-size: 2rem; color: #2c62b9; border-bottom: 2px solid #FF9900; padding-bottom: 4px; margin-top: 2rem; background: #FFF8DC; display: inline-block; width: 100%; box-sizing: border-box; text-align: center; }
-
-    /* Button styling */
-    .apply-button { background: #FF9900; color: #fff; padding: 12px 24px; border-radius: 4px; text-decoration: none; font-weight: bold; display: block; margin: 1rem auto; text-align: center; }
-    .apply-button:hover, .apply-button:focus { background: #FFB84D; }
-
-    /* Full-width sections */
-    .section-full { width: 100%; background: #FFF8DC; padding: 2rem 1rem; box-sizing: border-box; text-align: center; }
-    .section-full:focus { outline: 3px solid #005A9C; outline-offset: 2px; }
-
-    /* Quad-gallery */
-    .quad-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; max-width: 1146px; margin: 2rem auto; }
-    .quad-gallery img { width: 100%; height: auto; display: block; border-radius: 4px; }
-
-    /* Experience block */
-    .experience-block { background: #FFF8DC; padding: 2rem 1rem; margin: 2rem 0; }
-    .experience-block .wp-block-column { flex: 1; text-align: center; }
-
-    /* Community partners image */
-    .community-arts-partners { display: block; margin: 2rem auto; max-width: 80%; height: auto; }
-
-    /* Footer background */
-    .site-footer { background: #F5F5DC; padding: 2rem 0; }
-  </style>
+  <link rel="stylesheet" href="./Center for Creativity Styling/style.css">
 </head>
-<body>
+<body itemscope itemtype="http://schema.org/WebPage" class="home">
+
+  <!-- Skip link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <div id="page" class="site">
 
+    <!-- HEADER & NAV -->
     <header class="site-header">
       <nav class="primary-nav" aria-label="Main navigation">
         <div class="site-logo">
@@ -65,7 +21,7 @@
             <img src="./Center for Creativity Styling/cfclogo.png" alt="Center for Creativity">
           </a>
         </div>
-        <ul id="primary-menu" class="menu">
+        <ul class="menu">
           <li class="menu-item current-menu-item"><a href="/">Home</a></li>
           <li class="menu-item menu-item-has-children">
             <a href="#">About</a>
@@ -82,98 +38,99 @@
       </nav>
     </header>
 
+    <!-- MAIN CONTENT -->
     <div id="content" class="site-content">
-      <div class="col-full">
-        <main id="main-content" tabindex="-1" role="main">
+      <main id="main-content" tabindex="-1" role="main">
 
-          <!-- Call for Participation -->
-          <section>
-            <h2>CALL FOR PARTICIPATION</h2>
-            <h1>Now accepting proposals for curatorial projects and visual art exhibitions...</h1>
-            <a href="/exhibitions/exhibition-proposals/" class="apply-button">APPLY HERE</a>
-          </section>
+        <!-- CALL FOR PARTICIPATION -->
+        <section>
+          <h2 class="section-title">CALL FOR PARTICIPATION</h2>
+          <h1>Now accepting proposals for curatorial projects and visual art exhibitions...</h1>
+          <a href="/exhibitions/exhibition-proposals/" class="apply-button">APPLY HERE</a>
+        </section>
 
-          <!-- Experience/Create/Connect moved here -->
-          <section class="section-full experience-block" aria-labelledby="experience-heading" tabindex="0">
-            <h2 id="experience-heading" class="section-title">Experience • Create • Connect</h2>
-            <div class="wp-block-columns">
-              <div class="wp-block-column">
-                <h3>EXPERIENCE</h3>
-                <ul>
-                  <li>Inspiring art exhibits by local and international artists</li>
-                  <li>Diverse theater and music events</li>
-                  <li>Family friendly performances and shows to inspire youth</li>
-                  <li>Seasonal markets and events with artists and makers</li>
-                </ul>
-              </div>
-              <div class="wp-block-column">
-                <h3>CREATE</h3>
-                <ul>
-                  <li>A wide array of arts classes and programming for all ages</li>
-                  <li>Amenities for dedicated art practice: ceramics, printmaking, dance and performance</li>
-                  <li>Accessible classes accounting for busy schedules, financial need, and differing abilities</li>
-                </ul>
-              </div>
-              <div class="wp-block-column">
-                <h3>CONNECT</h3>
-                <ul>
-                  <li>A place to develop your creative talent with local mentors</li>
-                  <li>A dedicated space for community events from across the county</li>
-                  <li>A strong community of artists and art lovers</li>
-                </ul>
-              </div>
+        <!-- EXPERIENCE • CREATE • CONNECT -->
+        <section class="experience-block" aria-labelledby="experience-heading" tabindex="0">
+          <h2 id="experience-heading" class="section-title">Experience • Create • Connect</h2>
+          <div class="wp-block-columns">
+            <div class="wp-block-column">
+              <h3>EXPERIENCE</h3>
+              <ul>
+                <li>Inspiring art exhibits by local and international artists</li>
+                <li>Diverse theater and music events</li>
+                <li>Family friendly performances and shows to inspire youth</li>
+                <li>Seasonal markets and events with artists and makers</li>
+              </ul>
             </div>
-          </section>
+            <div class="wp-block-column">
+              <h3>CREATE</h3>
+              <ul>
+                <li>A wide array of arts classes and programming for all ages</li>
+                <li>Amenities for dedicated art practice: ceramics, printmaking, dance and performance</li>
+                <li>Accessible classes accounting for busy schedules, financial need, and differing abilities</li>
+              </ul>
+            </div>
+            <div class="wp-block-column">
+              <h3>CONNECT</h3>
+              <ul>
+                <li>A place to develop your creative talent with local mentors</li>
+                <li>A dedicated space for community events from across the county</li>
+                <li>A strong community of artists and art lovers</li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-          <!-- Quad-gallery relocated here -->
-          <section class="quad-gallery" aria-label="Community Showcase" tabindex="0">
-            <img src="./Center for Creativity Styling/thumb1.jpg" alt="alt text needed">
-            <img src="./Center for Creativity Styling/thumb2.jpg" alt="alt text needed">
-            <img src="./Center for Creativity Styling/thumb3.jpg" alt="alt text needed">
-            <img src="./Center for Creativity Styling/thumb4.jpg" alt="alt text needed">
-          </section>
+        <!-- QUAD GALLERY -->
+        <section class="quad-gallery" aria-label="Community Showcase" tabindex="0">
+          <img src="./Center for Creativity Styling/thumb1.jpg" alt="alt text needed">
+          <img src="./Center for Creativity Styling/thumb2.jpg" alt="alt text needed">
+          <img src="./Center for Creativity Styling/thumb3.jpg" alt="alt text needed">
+          <img src="./Center for Creativity Styling/thumb4.jpg" alt="alt text needed">
+        </section>
 
-          <!-- Our Mission/Vision/Story -->
-          <section class="section-full" tabindex="0" aria-labelledby="our-mission">
-            <h2 id="our-mission" class="section-title">Our Mission</h2>
-            <p>OUR MISSION is to establish an inclusive, accessible, and innovative arts center that nurtures creativity, strengthens community bonds, and empowers individuals to experience, create, and connect.</p>
-          </section>
-          <section class="section-full" tabindex="0" aria-labelledby="our-vision">
-            <h2 id="our-vision" class="section-title">Our Vision</h2>
-            <p>OUR VISION is a strong, connected, and vibrant community driven by engagement with the arts—a home for artists and arts organizations to engage with community together. A safe space where everyone is welcome and creativity unites us.</p>
-          </section>
-          <section class="section-full" tabindex="0" aria-labelledby="our-story">
-            <h2 id="our-story" class="section-title">Our Story</h2>
-            <p>Behind this effort is a passionate group of community leaders and artists working hard to make this dream a reality. Our journey began in 2010 with the formation of ARTS RWC, a collective of artists, art advocates, organizations, and civic leaders dedicated to advancing Redwood City as a dynamic and sustainable arts community.
+        <!-- OUR MISSION -->
+        <section aria-labelledby="our-mission">
+          <h2 id="our-mission" class="section-title">Our Mission</h2>
+          <p>OUR MISSION is to establish an inclusive, accessible, and innovative arts center that nurtures creativity, strengthens community bonds, and empowers individuals to experience, create, and connect.</p>
+        </section>
 
-In 2022, we took a significant step by establishing a formal Steering Committee. The role of our committee is to conduct research, develop plans, and rally support for a permanent facility in San Mateo County: The Center for Creativity.
+        <!-- OUR VISION -->
+        <section aria-labelledby="our-vision">
+          <h2 id="our-vision" class="section-title">Our Vision</h2>
+          <p>OUR VISION is a strong, connected, and vibrant community driven by engagement with the arts—a home for artists and arts organizations to engage with community together. A safe space where everyone is welcome and creativity unites us.</p>
+        </section>
 
-Since then, our Steering Committee has engaged civic leaders, raised funds, and conducted a feasibility study to assess our community’s need for a permanent arts center. The feasibility study aimed to inform decisions about the center’s activities, location, size, and overall operations.
+        <!-- OUR STORY -->
+        <section aria-labelledby="our-story">
+          <h2 id="our-story" class="section-title">Our Story</h2>
+          <p>Behind this effort is a passionate group of community leaders and artists working hard to make this dream a reality. Our journey began in 2010 with the formation of ARTS RWC, a collective of artists, art advocates, organizations, and civic leaders dedicated to advancing Redwood City as a dynamic and sustainable arts community. In 2022, we established a formal Steering Committee to research, plan, and rally support for a permanent facility: The Center for Creativity. Since then, we’ve engaged civic leaders, raised funds, and completed a feasibility study to guide our next steps. In 2023, we socialized those results and continue building community partnership for a permanent arts center.</p>
+        </section>
 
-In 2023 the feasibility study was completed, and the Steering Committee is now in the process of socializing our results and working within our community to raise support for the center. 
+        <!-- COMMUNITY PARTNERS -->
+        <img src="./Center for Creativity Styling/Community-Arts-Partners2025-1024x524.png"
+             alt="Our Community Arts Partners"
+             class="community-arts-partners"
+             tabindex="0">
 
-We have many community partners engaged in our efforts for a permanent arts center.</p>
-          </section>
+        <!-- KEEP IN TOUCH -->
+        <section>
+          <h2 class="section-title">Keep in Touch</h2>
+          <h3>Sign up to receive updates!</h3>
+          <a href="https://bit.ly/2YI6iME" class="apply-button">Stay Informed</a>
+          <p>Visit us on <a href="https://www.instagram.com/centerforcreativitysmc/">Instagram</a></p>
+        </section>
 
-          <!-- Partners image -->
-          <img src="./Center for Creativity Styling/Community-Arts-Partners2025-1024x524.png" alt="Our Community Arts Partners" class="community-arts-partners" tabindex="0">
+        <!-- HOURS & LOCATION -->
+        <section aria-labelledby="hours-location-heading">
+          <h2 id="hours-location-heading" class="section-title">Hours &amp; Location</h2>
+          <p>Mon–Fri: 9 am–6 pm<br>Sat: 10 am–4 pm<br>1400 Main Street, Redwood City, CA</p>
+        </section>
 
-          <!-- Keep in Touch & Hours -->
-          <section>
-            <h1>Keep in Touch</h1>
-            <h3>Sign up to receive updates!</h3>
-            <a class="apply-button" href="https://bit.ly/2YI6iME">Stay Informed</a>
-            <p>Visit us on <a href="https://www.instagram.com/centerforcreativitysmc/">Instagram</a></p>
-          </section>
-          <section class="section-full" aria-labelledby="hours-location-heading" tabindex="0">
-            <h2 id="hours-location-heading" class="section-title">Hours & Location</h2>
-            <p>Mon–Fri: 9 am–6 pm<br>Sat: 10 am–4 pm<br>1400 Broadway, Redwood City, CA</p>
-          </section>
-
-        </main>
-      </div>
+      </main>
     </div>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
       <!-- footer content unchanged -->
     </footer>

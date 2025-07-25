@@ -1,21 +1,16 @@
 /* Updated style.css for Accessibility & Layout */
 
-/* 1. Focus Indicators for all interactive elements */
+/* 1. Focus indicators */
 :focus {
   outline: 3px solid #005A9C;
   outline-offset: 2px;
 }
-
-a:focus,
-button:focus,
-input:focus,
-select:focus,
-textarea:focus {
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
   outline: 3px solid #005A9C;
   outline-offset: 2px;
 }
 
-/* 2. Skip-to-content link styling */
+/* 2. Skip-to-content link */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -30,23 +25,22 @@ textarea:focus {
   top: 0;
 }
 
-/* 3. Navigation styling fixes */
+/* 3. Navigation styling (full‑width) */
 .primary-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
   background: #FFF8DC;
   padding: 0.5rem 1rem;
-  position: relative;
-  margin: 0 auto;
-  max-width: 1146px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
 }
-
+.primary-nav .site-logo {
+  margin-right: auto;
+}
 .site-logo img {
-  height: 32px;
+  height: 40px;
   width: auto;
 }
-
 .primary-nav ul.menu {
   display: flex;
   flex-wrap: wrap;
@@ -54,12 +48,10 @@ textarea:focus {
   margin: 0;
   padding: 0;
 }
-
 .primary-nav li.menu-item {
   margin: 0 0.5rem;
   position: relative;
 }
-
 .primary-nav li.menu-item a {
   display: block;
   padding: 0.5rem 1rem;
@@ -67,15 +59,13 @@ textarea:focus {
   text-decoration: none;
   border-radius: 4px;
 }
-
 .primary-nav li.menu-item a:hover,
 .primary-nav li.menu-item a:focus,
-.primary-nav li.current-menu-item > a {
+.primary-nav .current-menu-item > a {
   background: #FFDA75;
   color: #111;
 }
-
-.primary-nav li.menu-item .sub-menu {
+.primary-nav .sub-menu {
   display: none;
   position: absolute;
   top: 100%;
@@ -92,108 +82,91 @@ textarea:focus {
 .primary-nav li.menu-item:hover > .sub-menu {
   display: block;
 }
-.primary-nav li.menu-item .sub-menu li a {
+.primary-nav .sub-menu li a {
   padding: 0.5rem 1rem;
   color: #333;
 }
 
-/* 4. Section header styles */
+/* 4. Section titles (inline only) */
 h2.section-title {
   font-size: 2rem;
   color: #2c62b9;
-  background: #FFF8DC;
-  padding: 0.5rem;
+  border-bottom: 2px solid #FF9900;
+  padding-bottom: 4px;
+  margin: 2rem auto 1rem;
   display: inline-block;
-  border-radius: 4px;
-  margin-top: 2rem;
 }
 
-/* 5. Carousel sizing and nav */
-.flexslider {
-  max-width: 100%;
-  margin: 1rem auto;
-}
-.flexslider .slides li img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
-.flexslider .flex-control-nav li a {
-  background: #FFDA75;
-}
-.flexslider .flex-control-nav li a.flex-active {
+/* 5. “Call for Participation” button */
+.apply-button {
   background: #FF9900;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  margin: 1rem auto;
+  text-align: center;
 }
-.flexslider .flex-direction-nav li a {
+.apply-button:hover,
+.apply-button:focus {
+  background: #FFB84D;
+}
+
+/* 6. Hide the old carousel */
+.flexslider {
   display: none;
 }
 
-/* 6. Experience/Create/Connect layout */
-.wp-block-columns {
+/* 7. Experience/Create/Connect block */
+.experience-block {
+  background: #FFF8DC;
+  padding: 2rem 1rem;
+  margin: 2rem 0;
+}
+.experience-block .wp-block-columns {
   display: flex;
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
 }
-.wp-block-column {
+.experience-block .wp-block-column {
   flex: 1;
   text-align: center;
 }
-.wp-block-column img {
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto 1rem;
+.experience-block h3 {
+  margin-bottom: 0.5rem;
+}
+.experience-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+.experience-block ul li {
+  margin: 0.5rem 0;
 }
 
-/* 7. Hide decorative images from AT */
-img[alt=""] {
-  visibility: hidden;
-}
-/* 8. Extend nav background full-width */
-.primary-nav {
-  width: 100%;
-  background: #FFF8DC;
-  padding: 0.5rem 1rem;
-}
-
-/* 9. Quad image grouping */
+/* 8. Quad-gallery */
 .quad-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
   gap: 1rem;
-  max-width: 1146px;
+  max-width: 400px;
   margin: 2rem auto;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  border-radius: 4px;
 }
 .quad-gallery img {
   width: 100%;
   height: auto;
   display: block;
+  border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-/* 10. Full-width section blocks */
-.section-full {
-  width: 100%;
-  background: #FFF8DC;
-  padding: 2rem 1rem;
-  box-sizing: border-box;
-  text-align: center;
-}
-
-/* 11. Make sections tabbable */
-.section-full:focus {
-  outline: 3px solid #005A9C;
-  outline-offset: 2px;
-}
-
-/* 12. Center Apply Here */
-.apply-button {
-  display: block;
-  margin: 1rem auto;
-}
-
-/* 13. Center community partners image */
+/* 9. Community partners image */
 .community-arts-partners {
   display: block;
   margin: 2rem auto;
@@ -201,8 +174,13 @@ img[alt=""] {
   height: auto;
 }
 
-/* 14. Background for Experience/Create/Connect */
-.wp-block-columns {
-  background: #FFF8DC;
-  padding: 2rem 1rem;
+/* 10. Footer */
+.site-footer {
+  background: #F5F5DC;
+  padding: 2rem 0;
+}
+
+/* 11. Hide decorative images from AT */
+img[alt=""] {
+  visibility: hidden;
 }
