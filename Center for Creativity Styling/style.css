@@ -150,3 +150,59 @@ h2.section-title {
 img[alt=""] {
   visibility: hidden;
 }
+/* 8. Extend nav background full-width */
+.primary-nav {
+  width: 100%;
+  background: #FFF8DC;
+  padding: 0.5rem 1rem;
+}
+
+/* 9. Quad image grouping */
+.quad-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  max-width: 1146px;
+  margin: 2rem auto;
+}
+.quad-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/* 10. Full-width section blocks */
+.section-full {
+  width: 100%;
+  background: #FFF8DC;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* 11. Make sections tabbable */
+.section-full:focus {
+  outline: 3px solid #005A9C;
+  outline-offset: 2px;
+}
+
+/* 12. Center Apply Here */
+.apply-button {
+  display: block;
+  margin: 1rem auto;
+}
+
+/* 13. Center community partners image */
+.community-arts-partners {
+  display: block;
+  margin: 2rem auto;
+  max-width: 80%;
+  height: auto;
+}
+
+/* 14. Background for Experience/Create/Connect */
+.wp-block-columns {
+  background: #FFF8DC;
+  padding: 2rem 1rem;
+}
