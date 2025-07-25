@@ -1,4 +1,4 @@
-/* Updated style.css for Accessibility */
+/* Updated style.css for Accessibility & Layout */
 
 /* 1. Focus Indicators for all interactive elements */
 :focus {
@@ -30,23 +30,23 @@ textarea:focus {
   top: 0;
 }
 
-/* 3. Navigation contrast and hover */
-/* Navigation styling fixes */
-
-/* Container alignment */
+/* 3. Navigation styling fixes */
 .primary-nav {
   display: flex;
-  justify-content: center; /* center nav items */
+  justify-content: center;
   align-items: center;
   background: #FFF8DC;
   padding: 0.5rem 1rem;
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   max-width: 1146px;
 }
 
-/* Menu list reset */
+.site-logo img {
+  height: 32px;
+  width: auto;
+}
+
 .primary-nav ul.menu {
   display: flex;
   flex-wrap: wrap;
@@ -55,14 +55,6 @@ textarea:focus {
   padding: 0;
 }
 
-/* Remove default bullets from sub-menus */
-.primary-nav ul.menu .sub-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* Menu items */
 .primary-nav li.menu-item {
   margin: 0 0.5rem;
   position: relative;
@@ -76,7 +68,6 @@ textarea:focus {
   border-radius: 4px;
 }
 
-/* Hover and focus states */
 .primary-nav li.menu-item a:hover,
 .primary-nav li.menu-item a:focus,
 .primary-nav li.current-menu-item > a {
@@ -84,7 +75,6 @@ textarea:focus {
   color: #111;
 }
 
-/* Sub-menu positioning and style */
 .primary-nav li.menu-item .sub-menu {
   display: none;
   position: absolute;
@@ -96,64 +86,67 @@ textarea:focus {
   padding: 0.5rem 0;
   min-width: 200px;
   z-index: 100;
+  list-style: none;
 }
-
 .primary-nav li.menu-item:focus-within > .sub-menu,
 .primary-nav li.menu-item:hover > .sub-menu {
   display: block;
-  list-style: none; /* ensure no bullets */
 }
-
-.primary-nav li.menu-item .sub-menu li {
-  margin: 0;
-}
-
 .primary-nav li.menu-item .sub-menu li a {
   padding: 0.5rem 1rem;
   color: #333;
 }
 
-.primary-nav li.menu-item .sub-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #FFF;
-  border: 1px solid #FFDA75;
-  border-radius: 4px;
-  padding: 0.5rem 0;
-  min-width: 200px;
-  z-index: 100;
-}
-
-.primary-nav li.menu-item:focus-within > .sub-menu,
-.primary-nav li.menu-item:hover > .sub-menu {
-  display: block;
-}
-
-.primary-nav li.menu-item .sub-menu li {
-  margin: 0;
-}
-
-.primary-nav li.menu-item .sub-menu li a {
-  padding: 0.5rem 1rem;
-  color: #333;
-}
-
-/* 5. Semantic section headers styling */
+/* 4. Section header styles */
 h2.section-title {
-  font-size: 1.5rem;
-  margin-top: 2rem;
+  font-size: 2rem;
   color: #2c62b9;
+  background: #FFF8DC;
+  padding: 0.5rem;
+  display: inline-block;
+  border-radius: 4px;
+  margin-top: 2rem;
 }
 
-/* 6. Carousel slide focus */
-.flexslider .slides li:focus-within {
-  outline: 3px solid #005A9C;
-  outline-offset: -2px;
+/* 5. Carousel sizing and nav */
+.flexslider {
+  max-width: 100%;
+  margin: 1rem auto;
+}
+.flexslider .slides li img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.flexslider .flex-control-nav li a {
+  background: #FFDA75;
+}
+.flexslider .flex-control-nav li a.flex-active {
+  background: #FF9900;
+}
+.flexslider .flex-direction-nav li a {
+  display: none;
 }
 
-/* 7. Decorative images hidden from assistive tech */
+/* 6. Experience/Create/Connect layout */
+.wp-block-columns {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.wp-block-column {
+  flex: 1;
+  text-align: center;
+}
+.wp-block-column img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 1rem;
+}
+
+/* 7. Hide decorative images from AT */
 img[alt=""] {
   visibility: hidden;
 }
